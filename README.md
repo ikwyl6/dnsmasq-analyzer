@@ -6,18 +6,19 @@ The dnsmasq.conf file has to have 'log-queries=extra' and 'log-facility' as an e
 The script parses the $log file and outputs some dicts in json format (easier reading). 
 
 ## Structures
-There are two main dictionaries used for keeping the data: ```did``` and ```request```.
+There are two main dictionaries used for keeping the data: ```did``` and ```request```. I created two structures/dictionaries because it was a little easier to see the data in different ways. I could use ```did``` and grab all stats from that dict to create the same thing as ```request``` but meh.
+
 ```did``` is sorted by all the dns ids from the dnsmasq log file. Each ```did``` dictionary entry is:
 
 ```did:```
 
     { 'dns_id': {
-                'query_host': string, the host that is dns is looking up
+                'query_host': string, the host that the IP has asked dns to look up
                 'query_ip': string, the IP that sent the query
                 'reply': {  
-                          'qr': string, the 'query response'
-                          'reply_host': string, the host that was in the reply.
-                          'reply_ip': string, the IP that was returned back in the response/reply.
+                          'qr': string, the 'query response'. Could be one of 'cached', 'forwarded', 'reply'.
+                          'reply_host': string, the host that was returned from the DNS in the reply.
+                          'reply_ip': string, the IP that was reolved and returned back in the response/reply.
                           }
                 }
     }
