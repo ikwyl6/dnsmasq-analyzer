@@ -13,13 +13,13 @@ There are two main dictionaries used for keeping the data: ```did``` and ```requ
 ```did:```
 
     { 'dns_id': {
-                'query_host': string, the host that the IP has asked dns to look up
-                'query_ip': string, the IP that sent the query
-                'reply': {  
-                          'qr': string, the 'query response'. Could be one of 'cached', 'forwarded', 'reply'.
-                          'reply_host': string, the host that was returned from the DNS in the reply.
-                          'reply_ip': string, the IP that was reolved and returned back in the response/reply.
-                          }
+            'query_host': string, the host that the IP has asked dns to look up
+            'query_ip': string, the IP that sent the query
+            'reply': {  
+                      'qr': string, the 'query response'. Could be one of 'cached', 'forwarded', 'reply'.
+                      'reply_host': string, the host that was returned from the DNS in the reply.
+                      'reply_ip': string, the IP that was reolved and returned back in the response/reply.
+                      }
                 }
     }
 
