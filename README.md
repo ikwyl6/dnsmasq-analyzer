@@ -23,7 +23,7 @@ There are two main dictionaries used for keeping the data: ```did``` and ```requ
                 }
     }
 
-```request:```
+```request:``` is sorted by all the requesting IPs
 
     { 'ip': {
               'query_count': int, how many queries has IP sent to DNS server
@@ -34,3 +34,6 @@ There are two main dictionaries used for keeping the data: ```did``` and ```requ
 ## Command Line Options:
 
 <code>dnsmasq-analyzer [-d | --date]</code> Pass a date in format 'Jan 25' if you want to search for results on this date.
+
+## Output
+By default it prints using json format for easier reading. This can be redirected to a file and then best viewed using your json viewer. 
