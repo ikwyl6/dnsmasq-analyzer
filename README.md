@@ -1,3 +1,4 @@
+# NOTE: This repo has been moved to codeberg: https://codeberg.org/ikwyl6/dnsmasq-analyzer
 # dnsmasq analyzer
 Analyses dnsmasq logs and prints out some useful information 
 
